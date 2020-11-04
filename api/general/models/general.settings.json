@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "generals",
+  "info": {
+    "name": "General",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "about": {
+      "type": "text"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.banner"
+    }
+  }
+}

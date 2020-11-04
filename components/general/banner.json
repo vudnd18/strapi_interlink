@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_general_banners",
+  "info": {
+    "name": "Banner",
+    "icon": "file-contract",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
