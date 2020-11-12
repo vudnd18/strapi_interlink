@@ -111,5 +111,3 @@ coverage
 license.txt
 exports
 .cache
-.vscode
-build
