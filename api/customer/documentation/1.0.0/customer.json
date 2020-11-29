@@ -534,6 +534,44 @@
           "note": {
             "type": "string"
           },
+          "advisory_types": {
+            "required": [
+              "id",
+              "name",
+              "slug"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "status": {
+                "type": "boolean"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "success",
+              "pending"
+            ]
+          },
           "published_at": {
             "type": "datetime"
           }
@@ -552,6 +590,17 @@
           },
           "note": {
             "type": "string"
+          },
+          "advisory_types": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "success",
+              "pending"
+            ]
           },
           "published_at": {
             "type": "datetime"

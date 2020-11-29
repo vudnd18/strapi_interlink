@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/advisory-types",
+      "handler": "advisory-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advisory-types/count",
+      "handler": "advisory-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advisory-types/:id",
+      "handler": "advisory-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/advisory-types",
+      "handler": "advisory-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/advisory-types/:id",
+      "handler": "advisory-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/advisory-types/:id",
+      "handler": "advisory-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

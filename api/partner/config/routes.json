@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/partners/:id",
+      "path": "/partners/:slug",
       "handler": "partner.findOne",
       "config": {
         "policies": []

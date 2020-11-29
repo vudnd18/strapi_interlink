@@ -7,13 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "position": {
-      "type": "enumeration",
-      "enum": [
-        "left",
-        "right"
-      ]
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -24,6 +17,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
     }
   }
 }

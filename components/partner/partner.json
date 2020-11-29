@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_type_partners",
+  "info": {
+    "name": "TypePartner",
+    "icon": "bars",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
