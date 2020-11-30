@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   settings: {
     cache: {
       enabled: true,
-      models: ['posts', 'general', 'partners'],
+      // models: ['posts', 'general', 'partners'],
     }
   }
 });
