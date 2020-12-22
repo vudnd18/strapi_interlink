@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_english_online_courses",
+  "info": {
+    "name": "course",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nameCourse": {
+      "type": "string",
+      "private": true,
+      "unique": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "discussionCount": {
+      "type": "integer"
+    },
+    "sessionsCount": {
+      "type": "integer"
+    },
+    "timeline": {
+      "type": "integer"
+    }
+  }
+}

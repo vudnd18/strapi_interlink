@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/posts": {
+    "/english-onlines": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Post"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "English-online"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Post"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPost"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/posts/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "English-online"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewEnglish-online"
+              }
+            }
+          }
+        }
       }
     },
-    "/posts/{slug}": {
+    "/english-onlines/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,11 +311,68 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "English-online"
+        ],
+        "parameters": []
+      }
+    },
+    "/english-onlines/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "English-online"
         ],
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -373,9 +382,7 @@
             }
           }
         ]
-      }
-    },
-    "/posts/{id}": {
+      },
       "put": {
         "deprecated": false,
         "description": "Update a record",
@@ -385,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -423,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "English-online"
         ],
         "requestBody": {
           "description": "",
@@ -431,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost"
+                "$ref": "#/components/schemas/NewEnglish-online"
               }
             }
           }
@@ -497,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "English-online"
         ],
         "parameters": [
           {
@@ -516,12 +527,10 @@
   },
   "components": {
     "schemas": {
-      "Post": {
+      "English-online": {
         "required": [
           "id",
-          "name",
-          "slug",
-          "image"
+          "name"
         ],
         "properties": {
           "id": {
@@ -530,142 +539,76 @@
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "category_id": {
-            "required": [
-              "id",
-              "name",
-              "slug"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "parent_id": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "datetime"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "course": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nameCourse": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "discussionCount": {
+                  "type": "integer"
+                },
+                "sessionsCount": {
+                  "type": "integer"
+                },
+                "timeline": {
+                  "type": "integer"
+                }
               }
             }
-          },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "favorite": {
-            "type": "boolean",
-            "default": false
           },
           "published_at": {
             "type": "datetime"
           }
         }
       },
-      "NewPost": {
+      "NewEnglish-online": {
         "required": [
-          "name",
-          "slug"
+          "name"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "category_id": {
-            "type": "string"
-          },
-          "favorite": {
-            "type": "boolean",
-            "default": false
+          "course": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nameCourse": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "discussionCount": {
+                  "type": "integer"
+                },
+                "sessionsCount": {
+                  "type": "integer"
+                },
+                "timeline": {
+                  "type": "integer"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "datetime"
@@ -680,9 +623,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Post"
-    }
-  ]
+  "tags": []
 }
