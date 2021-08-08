@@ -12,8 +12,8 @@ services:
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: production
-      LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+      LETSENCRYPT_HOST: beta.duhocinterlink.com
+      LETSENCRYPT_EMAIL: vudnd18@gmail.com
       VIRTUAL_HOST: beta.duhocinterlink.com
       VIRTUAL_PORT: 2000
     volumes:
