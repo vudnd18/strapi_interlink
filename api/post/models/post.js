@@ -12,7 +12,6 @@ module.exports = {
   
   lifecycles: {
     beforeCreate: async (model) => {
-      console.log(model);
       if (model.name) {
         model.slug = helper.convertSlug(model.name);
       }

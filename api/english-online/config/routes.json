@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/english-onlines",
+      "handler": "english-online.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/english-onlines/count",
+      "handler": "english-online.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/english-onlines/:id",
+      "handler": "english-online.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/english-onlines",
+      "handler": "english-online.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/english-onlines/:id",
+      "handler": "english-online.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/english-onlines/:id",
+      "handler": "english-online.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

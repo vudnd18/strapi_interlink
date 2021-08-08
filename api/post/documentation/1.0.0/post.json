@@ -520,7 +520,8 @@
         "required": [
           "id",
           "name",
-          "slug"
+          "slug",
+          "image"
         ],
         "properties": {
           "id": {
@@ -635,6 +636,10 @@
               }
             }
           },
+          "favorite": {
+            "type": "boolean",
+            "default": false
+          },
           "published_at": {
             "type": "datetime"
           }
@@ -657,6 +662,10 @@
           },
           "category_id": {
             "type": "string"
+          },
+          "favorite": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "datetime"

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "partners",
   "info": {
-    "name": "Partner"
+    "name": "Partner",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -27,6 +28,24 @@
     "url": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "address": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }

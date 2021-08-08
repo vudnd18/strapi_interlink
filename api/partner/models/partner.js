@@ -1,8 +1,22 @@
 'use strict';
+const helper = require('../../../lib/helper');
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks)
  * to customize this model
  */
 
-module.exports = {};
+module.exports = {
+  lifecycles: {
+    beforeCreate: async (model) => {
+      if (model.name) {
+        model.slug = helper.convertSlug(model.name);
+      }
+    },
+    beforeUpdate: async (params, model) => {
+      if (model.name) {
+        model.slug = helper.convertSlug(model.name);
+      }
+    },
+  },
+};

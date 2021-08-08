@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "advisory_types": {
+      "model": "advisory-types"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "success",
+        "pending"
+      ],
+      "default": "pending"
+    }
+  }
+}

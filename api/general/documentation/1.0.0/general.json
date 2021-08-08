@@ -338,13 +338,6 @@
                 "id": {
                   "type": "string"
                 },
-                "position": {
-                  "type": "string",
-                  "enum": [
-                    "left",
-                    "right"
-                  ]
-                },
                 "image": {
                   "required": [
                     "id",
@@ -411,6 +404,12 @@
                       "type": "string"
                     }
                   }
+                },
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
                 }
               }
             }
@@ -442,13 +441,6 @@
                 "id": {
                   "type": "string"
                 },
-                "position": {
-                  "type": "string",
-                  "enum": [
-                    "left",
-                    "right"
-                  ]
-                },
                 "image": {
                   "required": [
                     "id",
@@ -515,6 +507,12 @@
                       "type": "string"
                     }
                   }
+                },
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
                 }
               }
             }

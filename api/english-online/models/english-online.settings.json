@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "english_onlines",
+  "info": {
+    "name": "EnglishOnline"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "course": {
+      "type": "component",
+      "repeatable": true,
+      "component": "english-online.course"
+    }
+  }
+}
