@@ -108,5 +108,5 @@ coverage
 .env
 license.txt
 exports
-# .cache
-# build
+.cache
+build
