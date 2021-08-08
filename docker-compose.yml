@@ -15,7 +15,7 @@ services:
       LETSENCRYPT_HOST: beta.duhocinterlink.com
       LETSENCRYPT_EMAIL: vudnd18@gmail.com
       VIRTUAL_HOST: beta.duhocinterlink.com
-      VIRTUAL_PORT: 2000
+      VIRTUAL_PORT: 1337
     volumes:
       - ./:/srv/app
     ports:
