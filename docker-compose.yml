@@ -2,7 +2,7 @@ version: '3'
 services:
   strapi:
     image: strapi/strapi
-    container_name: yencons_strapi
+    container_name: duhocinterlink_strapi
     env_file: .env
     environment:
       DATABASE_CLIENT: mysql
