@@ -5,7 +5,7 @@ services:
     container_name: yencons_strapi
     env_file: .env
     environment:
-      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_CLIENT: mysql
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: 3307
       DATABASE_NAME: ${DATABASE_NAME}
