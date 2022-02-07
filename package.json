@@ -21,7 +21,7 @@
     "mysql": "latest",
     "path": "^0.12.7",
     "slugify": "^1.4.5",
-    "strapi": "3.2.1",
+    "strapi": "3.6.2",
     "strapi-admin": "3.2.1",
     "strapi-connector-bookshelf": "3.2.1",
     "strapi-middleware-cache": "^1.1.0",
